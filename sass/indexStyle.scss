@@ -14,7 +14,7 @@
     text-transform: uppercase;
     font-size:18px;
     color:white;
-    
+
     li{
         text-decoration: none;
         color:white;
@@ -34,7 +34,7 @@
         width:500px;
         padding:35px;
         animation: moveInLeft 2s ease-out;
-        
+
     }
 }
 
@@ -49,7 +49,7 @@
     background-color: #27E4FD;
     font-family: Lato,sans-serif;
     height:200px;
-    
+
 }
 
 .blurb_text{
@@ -61,7 +61,7 @@
 .button_container {
     text-align: center;
     margin-top: 50px;
-    
+
     button{
         width:100%;
         background-color: #5A2B5E;
@@ -79,7 +79,7 @@
         font-family: "Lato",sans-serif;
         padding: 10px;
     }
-    
+
     p{
         color:white;
         text-align: center;
@@ -103,13 +103,33 @@
 
 .bottom_footer{
     background-color: #5E77BE;
-    
+
     p{
         margin-bottom: 0;
         font-family: Lato,sans-serif;
         text-align: center;
         color:white;
     }
+}
+
+.modal_button_cancel{
+  background-color: red;
+  color:white;
+}
+
+.modal_button_yes{
+  background-color: #592D5D;
+  color:white;
+}
+.logging_out{
+  background-color:#328EC2;
+  color:white;
+  border:none;
+  position:relative;
+  left:1075px;
+}
+.hidden{
+  display:none;
 }
 @keyframes moveInLeft {
   0% {

@@ -87,6 +87,24 @@
     text-align: center;
     color: white; }
 
+.modal_button_cancel {
+  background-color: red;
+  color: white; }
+
+.modal_button_yes {
+  background-color: #592D5D;
+  color: white; }
+
+.logging_out {
+  background-color: #328EC2;
+  color: white;
+  border: none;
+  position: relative;
+  left: 1075px; }
+
+.hidden {
+  display: none; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
