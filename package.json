@@ -1,0 +1,27 @@
+{
+  "name": "fullfill",
+  "version": "1.0.0",
+  "description": "fullfill app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninikat/fullfillApp.git"
+  },
+  "keywords": [
+    "fullfill",
+    "sequelize"
+  ],
+  "author": "nydia and danny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninikat/fullfillApp/issues"
+  },
+  "homepage": "https://github.com/ninikat/fullfillApp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
