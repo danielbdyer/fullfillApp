@@ -16,6 +16,11 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: "cascade"
     });
     comment.belongsTo(models.user, { as: "user", foreignKey: "userId" });
+    comment.belongsToMany(models.user, {
+      through: "users_favcomments",
+      as: "favcomments",
+      foreignKey: "commentId"
+    });
   };
 
   return comment;

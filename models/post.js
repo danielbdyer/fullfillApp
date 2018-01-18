@@ -18,6 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       as: "tags",
       foreignKey: "postId"
     });
+    post.belongsToMany(models.user, {
+      through: "users_favposts",
+      as: "favposts",
+      foreignKey: "postId"
+    });
   };
 
   return post;

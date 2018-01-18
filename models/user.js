@@ -17,12 +17,12 @@ module.exports = (sequelize, DataTypes) => {
       as: "favtags",
       foreignKey: "userId"
     });
-    user.belongsToMany(posts.tag, {
+    user.belongsToMany(models.post, {
       through: "users_favposts",
       as: "favposts",
       foreignKey: "userId"
     });
-    user.belongsToMany(models.tag, {
+    user.belongsToMany(models.comment, {
       through: "users_favcomments",
       as: "favcomments",
       foreignKey: "userId"
