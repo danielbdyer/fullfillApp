@@ -1,27 +1,19 @@
 {
   "name": "fullfill",
   "version": "1.0.0",
-  "description": "fullfill app",
+  "description": "A reddit-style self-improvement website for learning about and adapting new life changes",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ninikat/fullfillApp.git"
-  },
-  "keywords": [
-    "fullfill",
-    "sequelize"
-  ],
-  "author": "nydia and danny",
+  "author": "Daniel Dyer",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ninikat/fullfillApp/issues"
-  },
-  "homepage": "https://github.com/ninikat/fullfillApp#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mustache-express": "^1.2.5",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
+    "sequelize": "^4.31.2"
   }
 }
