@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.STRING,
         unique: true
       },
+      uri: {
+        type: Sequelize.STRING,
+        unique: true
+      },
       description: {
         type: Sequelize.STRING
       },

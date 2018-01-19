@@ -22,6 +22,12 @@ module.exports = {
         allowNull: false,
         defaultValue: true
       },
+      postTitle: {
+        type: Sequelize.STRING
+      },
+      postSubheader: {
+        type: Sequelize.STRING
+      },
       postBody: {
         type: Sequelize.JSONB
       },

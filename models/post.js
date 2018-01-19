@@ -4,6 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     "post",
     {
       isInternal: DataTypes.BOOLEAN,
+      postTitle: DataTypes.STRING,
+      postSubheader: DataTypes.STRING,
       postBody: DataTypes.JSONB,
       postUrl: DataTypes.STRING
     },

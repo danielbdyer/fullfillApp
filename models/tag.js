@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     "tag",
     {
       name: DataTypes.STRING,
-      description: DataTypes.STRING
+      description: DataTypes.STRING,
+      uri: DataTypes.STRING
     },
     {}
   );

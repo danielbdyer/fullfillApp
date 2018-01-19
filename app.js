@@ -21,8 +21,8 @@ app.get("/posts", function(req, res) {
     .findAll({
       include: [
         {
-          model: models.user,
-          as: "user"
+          model: models.tag,
+          as: "tags"
         }
       ]
     })
