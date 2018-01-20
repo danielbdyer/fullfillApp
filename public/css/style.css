@@ -18,6 +18,9 @@
     .nav-items li a {
       color: white; }
 
+.label_white {
+  color: white; }
+
 .welcome_sign {
   background-color: #328EC2;
   color: white;
@@ -33,26 +36,42 @@
   background-color: #5D76C0;
   font-family: Lato,sans-serif;
   color: white;
-  height: 200px; }
+  height: 250px; }
 
-.options {
+.login_box {
   background-color: #27E4FD;
   font-family: Lato,sans-serif;
-  height: 200px; }
+  height: 250px; }
+
+.signup_box {
+  background-color: #592D5D;
+  font-family: Lato,sans-serif;
+  height: 250px; }
 
 .blurb_text {
   text-align: center;
-  margin-top: 40px;
-  font-size: 30px; }
+  margin-top: 35px;
+  font-size: 25px; }
+
+.title_text {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin: 10px 0 0 10px; }
 
 .button_container {
   text-align: center;
   margin-top: 50px; }
-  .button_container button {
-    width: 100%;
-    background-color: #5A2B5E;
-    color: white;
-    text-transform: uppercase; }
+
+.login_button {
+  background-color: #5A2B5E;
+  color: white;
+  text-transform: uppercase; }
+
+.signup_button {
+  background-color: #39E4FB;
+  color: white;
+  text-transform: uppercase; }
 
 .get_started {
   background-color: #5A2B5E;
@@ -102,8 +121,9 @@
   position: relative;
   left: 1075px; }
 
-.hidden {
-  display: none; }
+.active {
+  font-weight: bold;
+  text-decoration: underline; }
 
 @keyframes moveInLeft {
   0% {
@@ -114,3 +134,6 @@
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+.filler_bar {
+  background-color: #328EC2; }
