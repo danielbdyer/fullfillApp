@@ -80,6 +80,76 @@
   color: white;
   text-transform: uppercase; }
 
+.bottom_footer {
+  background-color: #5E77BE;
+  height: 4vh; }
+  .bottom_footer p {
+    margin-bottom: 0;
+    font-family: Lato,sans-serif;
+    text-align: center;
+    color: white; }
+
+.active {
+  font-weight: bold;
+  text-decoration: underline; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.settings_body {
+  font-family: "Lato",sans-serif;
+  background-color: #388FC0;
+  height: 100%; }
+
+.filler_bar {
+  background-color: #328EC2; }
+
+.welcome_sign_settings {
+  background-color: #328EC2;
+  color: white;
+  font-size: 100px;
+  text-align: center; }
+  .welcome_sign_settings img {
+    width: 500px;
+    padding: 35px;
+    animation: moveInLeft 2s ease-out; }
+
+.email_span {
+  font-size: 25px;
+  font-family: "Lato",sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: bold; }
+
+.logout_button {
+  border: solid;
+  border-color: #fff;
+  text-align: center;
+  background-color: #5A2B5E;
+  font-family: "Lato";
+  width: 100px;
+  font-size: 20px;
+  float: right;
+  margin: 10px 0 0 10px; }
+  .logout_button a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center; }
+  .logout_button a:visited {
+    color: white; }
+
+.right_user_logout {
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
 .get_started {
   background-color: #5A2B5E;
   text-align: center; }
@@ -105,19 +175,6 @@
   margin-bottom: 10px;
   font-family: Lato,sans-serif; }
 
-.bottom_footer {
-  background-color: #5E77BE;
-  height: 4vh; }
-  .bottom_footer p {
-    margin-bottom: 0;
-    font-family: Lato,sans-serif;
-    text-align: center;
-    color: white; }
-
-.active {
-  font-weight: bold;
-  text-decoration: underline; }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -128,23 +185,14 @@
     opacity: 1;
     transform: translate(0); } }
 
-.filler_bar {
-  background-color: #328EC2; }
-
-.settings_body {
+.not_logged_settings_body {
   font-family: "Lato",sans-serif;
   background-color: #388FC0;
   height: 100%; }
 
-.email_span {
-  font-size: 25px;
-  font-family: "Lato",sans-serif;
-  text-align: center;
-  color: white;
-  font-weight: bold; }
-
 .please_login_settings {
   background-color: #328EC2;
+  margin-top: 25px;
   color: white;
   font-size: 50px;
   font-family: "Lato",sans-serif;
@@ -153,25 +201,3 @@
   .please_login_settings a {
     text-decoration: none;
     color: #27E4FD; }
-
-.logout_button {
-  border: solid;
-  border-color: #fff;
-  text-align: center;
-  background-color: #5A2B5E;
-  font-family: "Lato";
-  width: 100px;
-  font-size: 20px;
-  float: right;
-  margin: 10px 0 0 10px; }
-  .logout_button a {
-    text-decoration: none;
-    color: #fff;
-    text-align: center; }
-  .logout_button a:visited {
-    color: white; }
-
-.right_user_logout {
-  text-align: right;
-  margin-top: 10px;
-  margin-bottom: 10px; }
