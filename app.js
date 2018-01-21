@@ -65,6 +65,7 @@ app.post('/login', (req,res) => {
     if(user.password == req.body.password) {
       req.session.email = req.body.email;
       req.session.authenticated = true;
+      req.session.userId = user.dataValues.id;
       res.redirect('/home');
     } else {
       res.send('Login attempt failed')
@@ -198,7 +199,7 @@ app.get('/', (req,res) => {res.redirect('/home')});
 //home page for local host is the index.mustache page
 app.get('/home', function(req, res){
   if(req.session.email){
-    res.render('loggedInIndex',{email : req.session.email});
+    res.render('loggedInIndex',{email : req.session.email, userId:req.session.userId});
   } else{
     res.render('index');
   }
@@ -207,7 +208,7 @@ app.get('/home', function(req, res){
 //settings page
 app.get('/settings', function(req, res) {
   if(req.session.email){
-    res.render('settings',{email : req.session.email});
+    res.render('settings',{email : req.session.email, userId:req.session.userId});
   } else{
     res.render('settingsNoLogin');
   }
