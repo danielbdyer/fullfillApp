@@ -1,28 +1,43 @@
-
 <html>
-<head>
-</head>
+   <head>
+      <title>Fullfill</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+      <link rel="stylesheet" href="../css/style.css">
+   </head>
 
-<body>
-<h1>Posts</h1>
+   <body class="parent_body">
+      <nav class="navigation">
+         <img class="logo_1 nav-brand" src="../img/Screen%20Shot%202018-01-16%20at%206.50.26%20PM.png">
+         <ul class="nav justify-content-end nav-items">
+            <li class="nav-item">
+               <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Materials</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="http://localhost:3000/settings">Settings</a>
+            </li>
+         </ul>
+      </nav>
+      <section class="container-fluid">
+        <div class="post-body">
+          {{#posts}}
+          <div class="post" id={{{id}}}>
+            <div class="post-header">{{postTitle}}</div>
+            <div class="post-subheader">{{postSubheader}}</div>
+
+            <div class="post-tags">{{#tags}}{{name}}{{/tags}}</div>
+            <div class="post-author">{{#user}}{{username}}{{/user}}</div>
+            </div>
+          {{/posts}}
+      </section>
+      <footer class="container-fluid bottom_footer">
+         <p>built by Nydia and Danny &#169;2018</p>
+      </footer>
 
 
-<ul>
-{{#posts}}
-<li>
-  {{postUrl}}
-
-  {{#tags}}
-    {{description}}
-  {{/tags}}
-
-</li>
-
-
-{{/posts}}
-</ul>
-
-
-</body>
-
+   </body>
 </html>

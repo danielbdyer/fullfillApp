@@ -137,7 +137,7 @@ module.exports = {
           id: "17",
           name: "Dealing with 'bad habits'",
           uri: "clearing",
-          description: "Being able to free yourself of unhelpful patterns of behavior",
+          description: "Being able to free myself of unhelpful patterns of behavior",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -153,7 +153,7 @@ module.exports = {
           id: "19",
           name: "Having more of a vision",
           uri: "vision",
-          description: "getting very clear about where you want to be and go",
+          description: "getting very clear about where I want to be and go",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -185,7 +185,7 @@ module.exports = {
           id: "23",
           name: "Self-image",
           uri: "self-image",
-          description: "paying attention to how you see and think of yourself",
+          description: "paying attention to how I see and think of myself",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -233,7 +233,7 @@ module.exports = {
           id: "29",
           name: "Working out more",
           uri: "fitness",
-          description: "getting clear on resources available to me as you work out",
+          description: "getting clear on resources available to me as I work out",
           createdAt: new Date(),
           updatedAt: new Date()
         },

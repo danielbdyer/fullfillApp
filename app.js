@@ -54,6 +54,8 @@ app.post('/signup',function(req,res){
 
 //log in the user
 app.post('/login', (req,res) => {
+  console.log(req.body.email)
+  console.log(req.body.password)
   var user = models.user.findOne({
     where:{
       email : req.body.email,
@@ -100,14 +102,39 @@ app.get('/logout',function(req,res){
   });
 });
 
-app.get("/posts", function(req, res) {
+app.get("/habits/all/posts/:id", function(req, res) {
+  let reqPost = req.params.id;
+  // get all the posts from the database using sequelize
+  models.post
+    .findAll({
+      where: {"id" : reqPost},
+      include: [
+        {
+          model: models.tag,
+          as: "tags",
+          }
+      ]
+    })
+    .then(function(posts) {
+      console.log(posts);
+      res.render("posts", { posts: posts });
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+});
+
+app.get("/posts/all", function(req, res) {
   // get all the posts from the database using sequelize
   models.post
     .findAll({
       include: [
         {
           model: models.tag,
-          as: "tags"
+          as: "tags",
+        },
+        { model: models.user,
+          as: "user"
         }
       ]
     })
@@ -119,6 +146,7 @@ app.get("/posts", function(req, res) {
       console.log(error);
     });
 });
+
 
 
 app.post("/shoppinglists", function(req, res) {
@@ -180,8 +208,8 @@ app.get('/settings', function(req, res) {
 
 });
 
-app.get("/api/stores", function(req, res) {
-  db.any("SELECT * FROM shoppinglists").then(function(data) {
+app.get("/api/posts", function(req, res) {
+  db.any("SELECT * FROM posts").then(function(data) {
     res.status(200).json({ status: "success", items: data });
   });
 });

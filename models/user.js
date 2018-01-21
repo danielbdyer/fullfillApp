@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   user.associate = function(models) {
+    user.hasMany(models.post, {
+      as: "userposts",
+      foreignKey: "userId"
+    })
     user.belongsToMany(models.tag, {
       through: "users_favtags",
       as: "favtags",
