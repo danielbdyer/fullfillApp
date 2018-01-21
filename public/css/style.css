@@ -106,21 +106,6 @@
     text-align: center;
     color: white; }
 
-.modal_button_cancel {
-  background-color: red;
-  color: white; }
-
-.modal_button_yes {
-  background-color: #592D5D;
-  color: white; }
-
-.logging_out {
-  background-color: #328EC2;
-  color: white;
-  border: none;
-  position: relative;
-  left: 1075px; }
-
 .active {
   font-weight: bold;
   text-decoration: underline; }
@@ -137,3 +122,30 @@
 
 .filler_bar {
   background-color: #328EC2; }
+
+.body {
+  font-family: "Lato",sans-serif;
+  background-color: #388FC0;
+  height: 100%; }
+
+.email_span {
+  font-size: 25px;
+  font-family: "Lato",sans-serif; }
+
+.please_login_settings {
+  background-color: #328EC2;
+  color: white;
+  font-size: 50px;
+  font-family: "Lato",sans-serif;
+  text-align: center; }
+  .please_login_settings a {
+    text-decoration: none;
+    color: #27E4FD; }
+
+.logout_button {
+  border: solid;
+  text-align: center;
+  background-color: #5D76C0;
+  font-family: "Lato";
+  margin-top: 100px;
+  font-size: 20px; }
