@@ -1,6 +1,9 @@
+.parent-body {
+  height: 100%; }
+
 .navigation {
   background-color: #5A2B5E;
-  height: 113px; }
+  min-height: 113px; }
 
 .logo_1 {
   width: 140px;
@@ -24,7 +27,8 @@
 .welcome_sign {
   background-color: #328EC2;
   color: white;
-  height: 250px;
+  height: 33vh;
+  min-height: 250px;
   font-size: 100px;
   text-align: center; }
   .welcome_sign img {
@@ -36,17 +40,20 @@
   background-color: #5D76C0;
   font-family: Lato,sans-serif;
   color: white;
-  height: 250px; }
+  height: 33vh;
+  min-height: 250px; }
 
 .login_box {
   background-color: #27E4FD;
   font-family: Lato,sans-serif;
-  height: 250px; }
+  min-height: 250px;
+  height: 33vh; }
 
 .signup_box {
   background-color: #592D5D;
   font-family: Lato,sans-serif;
-  height: 250px; }
+  min-height: 250px;
+  height: 33vh; }
 
 .blurb_text {
   text-align: center;
@@ -99,7 +106,8 @@
   font-family: Lato,sans-serif; }
 
 .bottom_footer {
-  background-color: #5E77BE; }
+  background-color: #5E77BE;
+  height: 4vh; }
   .bottom_footer p {
     margin-bottom: 0;
     font-family: Lato,sans-serif;
