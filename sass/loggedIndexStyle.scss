@@ -1,0 +1,15 @@
+.welcome_information{
+    background-color: #328EC2;
+    color:white;
+    height:80vh;
+    min-height:250px;
+    font-size:45px;
+    text-align: center;
+    img{
+        margin-top:45px;
+        width:500px;
+        padding:35px;
+        animation: moveInLeft 2s ease-out;
+
+    }
+}

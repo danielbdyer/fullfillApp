@@ -168,7 +168,13 @@ app.post("/groceryitems/:id", function(req, res) {
 app.get('/', (req,res) => {res.redirect('/home')});
 
 //home page for local host is the index.mustache page
-app.get('/home', (req, res) => res.render('index'))
+app.get('/home', function(req, res){
+  if(req.session.email){
+    res.render('loggedInIndex',{email : req.session.email});
+  } else{
+    res.render('index');
+  }
+});
 
 //settings page
 app.get('/settings', function(req, res) {
