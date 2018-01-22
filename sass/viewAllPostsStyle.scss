@@ -1,0 +1,31 @@
+.vote {
+  display: inline-block;
+  overflow: hidden;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  background: url('http://i.stack.imgur.com/iqN2k.png');
+  background-position: 0 -25px;
+}
+
+.vote.on {
+  background-position: 0 2px;
+}
+
+.post-subheader {
+  width: 80%;
+}
+
+.post-tags {
+    text-transform: lowercase;
+    text-decoration: underline;
+    font-size: .8em;
+}
+
+.post-votes {
+  width: 5%;
+}
+
+.post-details {
+  width: 95%;
+}

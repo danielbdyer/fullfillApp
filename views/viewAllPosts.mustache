@@ -23,16 +23,31 @@
          </ul>
       </nav>
       <section class="container-fluid">
-        <div class="post-body">
+        <div class="row">
+        <div class="post-body col-md-10">
           {{#posts}}
-          <div class="post" id={{{id}}}>
-            <div class="post-header">{{postTitle}}</div>
-            <div class="post-subheader">{{postSubheader}}</div>
+          <div class="post container-fluid" id="post{{{id}}}">
+            <div class="row">
+              <div class="post-votes">
+                <span class="vote"> </span>
+              </div>
+              <div class="post-details">
+              <div class="post-header"><h3>{{postTitle}}</h3></div>
+              <div class="post-subheader">{{postSubheader}}</div>
 
-            <div class="post-tags">{{#tags}}{{name}}{{/tags}}</div>
-            <div class="post-author">{{#user}}{{username}}{{/user}}</div>
+              <div class="post-tags">{{#tags}}<a href="/tags/{{{uri}}}">{{name}}</a>&nbsp;{{/tags}}</div>
+              <div class="post-author">{{#user}}{{username}}{{/user}}</div>
             </div>
+            </div>
+          </div>
           {{/posts}}
+        </div>
+        <div class="col-md-2 post-nav">
+          <div class="tree">
+            <div class="alltags">All Tags</div>
+            <div class="usertags"></div>
+        </div>
+      </div>
       </section>
       <footer class="container-fluid bottom_footer">
          <p>built by Nydia and Danny &#169;2018</p>
@@ -40,4 +55,9 @@
 
 
    </body>
+   <script
+			  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+			  crossorigin="anonymous"></script>
+   <script src="../js/button.js"></script>
 </html>

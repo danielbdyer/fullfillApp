@@ -34,6 +34,7 @@
   .welcome_sign img {
     width: 500px;
     padding: 35px;
+    -webkit-animation: moveInLeft 2s ease-out;
     animation: moveInLeft 2s ease-out; }
 
 .blurb {
@@ -82,7 +83,11 @@
 
 .bottom_footer {
   background-color: #5E77BE;
-  height: 4vh; }
+  height: 4vh;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; }
   .bottom_footer p {
     margin-bottom: 0;
     font-family: Lato,sans-serif;
@@ -93,14 +98,30 @@
   font-weight: bold;
   text-decoration: underline; }
 
-@keyframes moveInLeft {
+@-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(-100px);
     transform: translateX(-100px); }
   80% {
+    -webkit-transform: translateX(10px);
     transform: translateX(10px); }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px); }
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
     transform: translate(0); } }
 
 .settings_body {
@@ -223,3 +244,29 @@
     width: 700px;
     padding: 35px;
     animation: moveInLeft 2s ease-out; }
+
+.vote {
+  display: inline-block;
+  overflow: hidden;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  background: url("http://i.stack.imgur.com/iqN2k.png");
+  background-position: 0 -25px; }
+
+.vote.on {
+  background-position: 0 2px; }
+
+.post-subheader {
+  width: 80%; }
+
+.post-tags {
+  text-transform: lowercase;
+  text-decoration: underline;
+  font-size: .8em; }
+
+.post-votes {
+  width: 5%; }
+
+.post-details {
+  width: 95%; }
