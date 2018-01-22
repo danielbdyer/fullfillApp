@@ -1,31 +1,87 @@
-.vote {
-  display: inline-block;
-  overflow: hidden;
-  width: 40px;
-  height: 25px;
-  cursor: pointer;
-  background: url('http://i.stack.imgur.com/iqN2k.png');
-  background-position: 0 -25px;
+.main-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
-.vote.on {
-  background-position: 0 2px;
-}
-
-.post-subheader {
-  width: 80%;
-}
-
-.post-tags {
-    text-transform: lowercase;
-    text-decoration: underline;
-    font-size: .8em;
-}
-
-.post-votes {
-  width: 5%;
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      padding: 10px;
 }
 
 .post-details {
-  width: 95%;
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-subheader {
+  width: 60%;
+  min-width: 550px;
+  font-size: small;
+  font-style:italic;
+  padding-left: 11px;
+  padding-bottom: 2px;
+}
+
+span.smallcaps {
+  font-variant: small-caps;
+  font-size: .8em;
+}
+
+.post-tags a {
+      text-transform: lowercase;
+      text-decoration: underline;
+      font-size: .8em;
+}
+
+span.author {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.post-votes {
+  width: 75px;
+  margin-right: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+      span {
+        margin: 0 auto;
+      }
+}
+
+
+h5 {
+  font-style: italic;
+}
+
+.submit-request {
+  margin-left: 20px;
 }

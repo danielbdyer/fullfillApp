@@ -4,6 +4,9 @@
       <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="../../../css/style.css">
    </head>
 
@@ -12,10 +15,10 @@
          <img class="logo_1 nav-brand" src="../../../img/Screen%20Shot%202018-01-16%20at%206.50.26%20PM.png">
          <ul class="nav justify-content-end nav-items">
             <li class="nav-item">
-               <a class="nav-link active" href="#">Home</a>
+               <a class="nav-link active" href="/home">Home</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Materials</a>
+               <a class="nav-link" href="/posts/all">Materials</a>
             </li>
             <li class="nav-item">
                <a class="nav-link" href="http://localhost:3000/settings">Settings</a>
@@ -27,20 +30,21 @@
         <div class="post-body col-md-10">
           {{#posts}}
           <div class="post container-fluid" id="post{{{id}}}">
-            <div class="row">
-              <div class="post-votes">
-                <span class="vote"> </span>
-              </div>
+                  <div class="post-votes" style="font-size: 30px; color:#606060; text-align: center;">
+                        <span class="fa fa-arrow-up col-md-12"></span>
+                        <span class="col-md-12">&nbsp;0</span><!-- Number goes here -->
+                        <span class="fa fa-arrow-down col-md-12"></span>
+                    </div>
               <div class="post-details">
               <div class="post-header"><h3>{{postTitle}}</h3></div>
               <div class="post-subheader">{{postSubheader}}</div>
-
-              <div class="post-tags">{{#tags}}<a href="">{{name}}</a>&nbsp;{{/tags}}</div>
+              <div class="post-footer">
+              <div class="post-tags">{{#tags}}<a href="">{{name}}</a>&nbsp;{{/tags}} | </div>
               <div class="post-author">{{#user}}{{username}}{{/user}}</div>
             </div>
+              </div>
             </div>
-          </div>
-          {{/posts}}
+            {{/posts}}
         </div>
         <div class="col-md-2 post-nav">
           <div class="tree">
@@ -52,12 +56,5 @@
       <footer class="container-fluid bottom_footer">
          <p>built by Nydia and Danny &#169;2018</p>
       </footer>
-
-
    </body>
-   <script
-			  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-			  crossorigin="anonymous"></script>
-   <script src="../../../js/button.js"></script>
 </html>

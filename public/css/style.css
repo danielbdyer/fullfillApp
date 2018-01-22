@@ -83,21 +83,8 @@
 
 .bottom_footer {
   background-color: #5E77BE;
-  height: 4vh;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-  .bottom_footer p {
-    margin-bottom: 0;
-    font-family: Lato,sans-serif;
-    text-align: center;
-    color: white; }
-
-.bottom_footer1 {
-  background-color: #5E77BE;
   height: 4vh; }
-  .bottom_footer1 p {
+  .bottom_footer p {
     margin-bottom: 0;
     font-family: Lato,sans-serif;
     text-align: center;
@@ -254,28 +241,78 @@
     padding: 35px;
     animation: moveInLeft 2s ease-out; }
 
-.vote {
-  display: inline-block;
-  overflow: hidden;
-  width: 40px;
-  height: 25px;
-  cursor: pointer;
-  background: url("http://i.stack.imgur.com/iqN2k.png");
-  background-position: 0 -25px; }
+.main-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
 
-.vote.on {
-  background-position: 0 2px; }
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 10px; }
+
+.post-details {
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .post-subheader {
-  width: 80%; }
+  width: 60%;
+  min-width: 550px;
+  font-size: small;
+  font-style: italic;
+  padding-left: 11px;
+  padding-bottom: 2px; }
 
-.post-tags {
+span.smallcaps {
+  font-variant: small-caps;
+  font-size: .8em; }
+
+.post-tags a {
   text-transform: lowercase;
   text-decoration: underline;
   font-size: .8em; }
 
-.post-votes {
-  width: 5%; }
+span.author {
+  font-size: .8em;
+  font-style: italic; }
 
-.post-details {
-  width: 95%; }
+.post-votes {
+  width: 75px;
+  margin-right: 5px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-item-align: center;
+  align-self: center; }
+  .post-votes span {
+    margin: 0 auto; }
+
+h5 {
+  font-style: italic; }
+
+.submit-request {
+  margin-left: 20px; }

@@ -25,33 +25,22 @@
             </li>
          </ul>
       </nav>
-      <div class="main-body">
-        <div class="post-body">
-          {{#posts}}
-          <div class="post" id="post{{{id}}}">
-                  <div class="post-votes" style="font-size: 30px; color:#606060; text-align: center;">
-                        <span class="fa fa-arrow-up col-md-12"></span>
-                        <span class="col-md-12">0</span><!-- Number goes here -->
-                        <span class="fa fa-arrow-down col-md-12"></span>
-                    </div>
-              <div class="post-details">
-              <div class="post-header"><h4>{{postTitle}}</h4></div>
-              <div class="post-subheader">{{postSubheader}}</div>
-              <div class="post-footer">
-              <div class="post-tags"><span class="smallcaps">tagged as:</span>{{#tags}}&nbsp;<a href="/topics/{{{uri}}}">{{name}}</a>{{/tags}}</div>
-              <div class="post-author"><span class="smallcaps">submitted by: </span><span class="author">{{#user}}{{username}}{{/user}}</span></div>
-            </div>
-              </div>
-            </div>
-            {{/posts}}
-            <div class="post" id="newpost">
-              <div class="submit-request"><h5>Are we missing a habit you'd like to share? Please <a href="/newpost">submit</a> it to us!</h5></div>
-        </div>
+      <div class="create-post">
+        <form method="POST" action="/newpost">
+          <input type="text" name="title"></input>
+          <input type="text" name="subheader"></input>
+          <select class="form-control" name="sub_menu" id="sub_menu">
+            {{#alltags}}
+               <option name="{{{id}}}">{{name}}</option>
+            {{/alltags}}
+          </select>
+          <button type="submit" name="submit">Post New Habit</button>
+        </form>
       </div>
         <div class="post-nav">
           <div class="tree">
-            <div class="alltags"><a href="/topics/all">All Tags</a></div>
-            {{#alltags}}<div class="usertags"><a href="/topics/{{{uri}}}">{{name}}</a></div>{{/alltags}}
+            <div class="alltags">All Tags</div>
+            <div class="usertags"></div>
         </div>
       </div>
     </div>
