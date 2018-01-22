@@ -40,16 +40,14 @@
             <div class="col-md-12 get_started">
                <h2>Get Started</h2>
                <p>What areas would you to like to improve on?</p>
-               <button class="oval_test"> Eating Well </button>
-               <button class="oval_test"> Waking up early </button>
-               <button class="oval_test"> Stress Relief </button>
-               <button class="oval_test"> Meal Prep </button>
-               <button class="oval_test"> Exercise Daily </button>
-               <button class="oval_test"> Stretch Muscles </button>
-               <button class="oval_test"> Cry Less </button>
-               <button class="oval_test"> Disconnect </button>
-               <button class="oval_test"> Study </button>
-               <br><br>
+               <div class="list_holder">
+                 <ul class="tag_list">
+                 {{#tags}}
+                 <li><button tagId="{{id}}" class="oval_test">{{name}}</button></li>
+                 {{/tags}}
+               </ul>
+             </div>
+              <br>
 
             </div>
          </div>

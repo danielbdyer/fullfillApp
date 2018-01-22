@@ -89,6 +89,15 @@
     font-family: Lato,sans-serif;
 }
 
+.list_holder{
+  display:flex;
+}
+.tag_list{
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 @keyframes moveInLeft {
   0% {
     opacity: 0;

@@ -206,14 +206,25 @@ app.get('/home', function(req, res){
 });
 
 //settings page
+// app.get('/settings', function(req, res) {
+//   if(req.session.email){
+//     res.render('settings',{email : req.session.email, userId:req.session.userId});
+//   } else{
+//     res.render('settingsNoLogin');
+//   }
+// });
+
 app.get('/settings', function(req, res) {
   if(req.session.email){
-    res.render('settings',{email : req.session.email, userId:req.session.userId});
+    const tag = models.tag.findAll()
+    .then(function(tags){
+    res.render('settings',{email : req.session.email, userId:req.session.userId,'tags':tags})
+  });
   } else{
     res.render('settingsNoLogin');
   }
-
 });
+
 
 app.get("/api/posts", function(req, res) {
   db.any("SELECT * FROM posts").then(function(data) {
