@@ -23,12 +23,6 @@ app.use(session({
   saveUninitialized: true,
 }));
 
-app.use(function(req, res, next) {
-   if(req.url.substr(-1) == '/' && req.url.length > 1)
-       res.redirect(301, req.url.slice(0, -1));
-   else
-       next();
-});
 
 //sign up user and add to user table
 app.post('/signup',function(req,res){
@@ -45,18 +39,6 @@ app.post('/signup',function(req,res){
   }).then(res.redirect('/home'));
 })
 
-//testing the query
-// let emailAddressLogin = "mak@dog.com"
-// let password34 = "dogs"
-// models.user.findOne({
-//
-//   where:{
-//       email : emailAddressLogin,
-//       password : password34
-//   }
-// }).then(function(user){
-//   console.log(user.password);
-// })
 
 //log in the user
 app.post('/login', (req,res) => {
@@ -78,13 +60,6 @@ app.post('/login', (req,res) => {
     }
   })
 })
-
-//login the user
-// app.post('/login',function(req,res){
-//   req.session.email = req.body.email;
-//   req.session.password  = req.body.password;
-//   res.end('done')
-// })
 
 //to check if user is logged in
 app.get('/logged',function(req,res){
@@ -147,61 +122,14 @@ app.get("/posts/all", function(req, res) {
     })
     .then(function(posts) {
       console.log(posts);
-      res.render("viewAllPosts", { posts: posts });
+      res.render("posts", { posts: posts });
     })
     .catch(function(error) {
       console.log(error);
     });
 });
 
-app.get("/tags/:uris/", function(req, res) {
-  // get all the posts from the database using sequelize
-  models.post
-    .findAll({
-      include: [
-        {
-          model: models.tag,
-          where: {"uri" : req.params.uris.split('+')},
-          as: "tags",
-        },
-        { model: models.user,
-          as: "user"
-        }
-      ]
-    })
-    .then(function(posts) {
-      console.log(posts);
-      res.render("viewAllPosts", { posts: posts });
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-});
 
-app.get("/tags/:uri/posts/:id", function(req, res) {
-  // get all the posts from the database using sequelize
-  models.post
-    .findOne({
-      where: {"id" : req.params.id},
-      include: [
-        {
-          model: models.tag,
-          where: {"uri" : req.params.uri},
-          as: "tags",
-        },
-        { model: models.user,
-          as: "user"
-        }
-      ]
-    })
-    .then(function(posts) {
-      console.log(posts);
-      res.render("viewSinglePost", { posts: posts });
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-});
 
 app.post("/shoppinglists", function(req, res) {
   let storename = req.body.storename;
