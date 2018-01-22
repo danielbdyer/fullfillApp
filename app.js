@@ -42,8 +42,6 @@ app.post('/signup',function(req,res){
 
 //log in the user
 app.post('/login', (req,res) => {
-  console.log(req.body.email)
-  console.log(req.body.password)
   var user = models.user.findOne({
     where:{
       email : req.body.email,
@@ -186,14 +184,24 @@ app.get('/home', function(req, res){
   }
 });
 
-//settings page
-// app.get('/settings', function(req, res) {
-//   if(req.session.email){
-//     res.render('settings',{email : req.session.email, userId:req.session.userId});
-//   } else{
-//     res.render('settingsNoLogin');
-//   }
-// });
+
+//delete the user Account
+app.get('/deleteAccount/:id', function(req, res) {
+  let userIdValue = req.params.id;
+  req.session.destroy(function(err){
+    if(err){
+      res.negotiate(err);
+    }
+    console.log("user is logged out");
+  });
+  var user = models.user.destroy({
+    where:{
+      id : userIdValue
+    }
+  }).then(function(user){
+    res.redirect('/home');
+  });
+});
 
 app.get('/settings', function(req, res) {
   if(req.session.email){
