@@ -1,16 +1,12 @@
 # fullfillApp
 
-## Intro
-
-### While there are many applications out there for tracking a habit, Fullfill is a reddit-style content network meant to invite users to collectively collaborate on their process of building one.
-
-#### Original Mockup Idea
-
-![mockupIdea](https://i.imgur.com/oyeSzBj.png)
-
 #### See our YouTube demo here!
 
 https://www.youtube.com/watch?v=4yHnL0zcra8
+
+## Intro
+
+While there are many applications out there for tracking a habit, Fullfill is a reddit-style content network meant to invite users to collectively collaborate on their process of building one.
 
 ## What We Used
 
@@ -33,6 +29,10 @@ https://www.youtube.com/watch?v=4yHnL0zcra8
 Users can sign up using the account creation tool, or alternately log in if they already exist within the database. From there, currently, they will be presented with a screen where they are able to see all posts that are available in the database. Subsequent versions of the web app will work to incorporate the user’s topical/tag choices into the database query that produces the tags they are wishing to see, so that users can further personalize their experience on the web app.
 
 ## Our Design Process
+
+#### Original Mockup Idea
+
+![mockupIdea](https://i.imgur.com/oyeSzBj.png)
 
 We worked to design the app from the top-down, starting with our big ideas about what we wanted to implement. We decided that, in our full vision of the site, we’d need several tables to form our PostgreSQL back-end:
 
