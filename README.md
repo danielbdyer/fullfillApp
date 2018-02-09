@@ -26,7 +26,7 @@ While there are many applications out there for tracking a habit, Fullfill is a 
 
 ## Using the App
 
-Users can sign up using the account creation tool, or alternately log in if they already exist within the database. From there, currently, they will be presented with a screen where they are able to see all posts that are available in the database. Subsequent versions of the web app will work to incorporate the user’s topical/tag choices into the database query that produces the tags they are wishing to see, so that users can further personalize their experience on the web app.
+Users can sign up using the account creation tool, or alternately log in if they already exist within the database. From there, currently, they will be presented with a screen where they are able to see all posts that are available in the database. Subsequent versions of the web app will work to incorporate the user’s topical/tag choices into the database query that produces the tags they are wishing to see, so that users can further personalize their experience on the app.
 
 ## Our Design Process
 
@@ -34,7 +34,9 @@ Users can sign up using the account creation tool, or alternately log in if they
 
 ![mockupIdea](https://i.imgur.com/oyeSzBj.png)
 
-We worked to design the app from the top-down, starting with our big ideas about what we wanted to implement. We decided that, in our full vision of the site, we’d need several tables to form our PostgreSQL back-end:
+We worked to design the app from the top-down, starting with our big ideas about what we wanted to implement.
+
+We decided that, in our full vision of the site, we’d need several tables to form our PostgreSQL back-end:
 
 * Tags
 * Posts
@@ -60,15 +62,21 @@ The many-to-many relationships require join tables from a database perspective, 
 
 Using Sequelize, we then seeded some beginning activity to some of these tables, to get some content available on the site. The alpha content can be found within the ‘/seeders’ subdirectory.
 
+...
+
 From there, we worked to establish the flow of activity within the site. We asked ourselves, “What would a traditional progression of events look like for a user, using our web app?”
 
 We imagined that an individual would join the site, sign up for the tags they wished to see, and would begin interacting with the site, which would now be reduced in scope to the topics that appealed to them personally. We imagined they would have the potential to add and remove topics as they pleased. We also envisioned them interacting with the posts, adding comments, up-voting or down-voting content as it was helpful or not helpful to them.
+
+...
 
 We also foresaw that we wished to have some restriction on the users with regards to making posts – for example, only when they had established themselves as reputable users – and we planned to implement a restrictor that checked to see either how long they had been active, or their ‘karma’ score thus far, in order to ascertain whether they’d be allowed to create a new post.
 
 ## Our Challenges
 
-We found that our approach of designing from the top-down was an accurate way of thinking about a project of this scope, but given our time constraint of about a week, our manner of implementation had to also be to implement from the top-down – that is to say, everything at once. We believe the better route, however, in a project of this magnitude, is to develop from the bottom-up, incrementally adding features that build and leverage upon one another, and that was something that the both of us took from this project.
+We found that our approach of designing from the top-down was an accurate way of thinking about a project of this scope, but given our time constraint of about a week, our manner of implementation had to also be to implement from the top-down – that is to say, everything at once.
+
+We believe the better route, however, in a project of this magnitude, is to develop from the bottom-up, incrementally adding features that build and leverage upon one another, and that was something that the both of us took from this project.
 
 Going forwards, we are also faced with the notion of moderation and quality-assurance in a crowdsource model like this, which relies on its users to collectively develop good resources. We envisioned some sort of Wikipedia model, with version-control and tracking, but were unable to implement something of that scope within the given-time frame. Still, we believe this is our preferred approach, along with a moderation team, and a written set of standards for our users.
 
