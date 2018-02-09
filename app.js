@@ -86,13 +86,9 @@ app.get("/logged", function(req, res) {
 
 // logout the user
 app.get("/logout", function(req, res) {
-  req.session.destroy(function(err) {
-    if (err) {
-      res.negotiate(err);
-    }
-    console.log("user is logged out");
-    res.redirect("/home");
-  });
+  req.session = null  
+  console.log("user is logged out");
+  res.redirect("/home");
 });
 
 app.get("posts/:id", function(req, res) {
