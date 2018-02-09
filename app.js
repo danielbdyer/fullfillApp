@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const promise = require("bluebird");
 const methodOverride = require("method-override");
-const session = require("express-session");
+const session = require("cookie-session");
 const app = express();
 
 var currentshoppinglists;
