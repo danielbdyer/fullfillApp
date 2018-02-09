@@ -4,7 +4,8 @@
   "description": "A reddit-style self-improvement website for learning about and adapting new life changes",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Daniel Dyer",
   "license": "ISC",
