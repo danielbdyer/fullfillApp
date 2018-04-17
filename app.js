@@ -8,8 +8,6 @@ const methodOverride = require("method-override");
 const session = require("cookie-session");
 const app = express();
 
-var currentshoppinglists;
-
 app.engine("mustache", mustacheExpress());
 app.set("views", "./views");
 app.use(methodOverride("_method"));
@@ -44,11 +42,11 @@ app.post("/signup", function(req, res) {
       username: username
     })
     .then(function(newUser) {
-      console.log(newUser);
+      //console.log(newUser);
     })
     .then(res.redirect("/settings"))
     .catch(function(err) {
-      console.log(err, req.body.email);
+      //console.log(err, req.body.email);
     });
 });
 
@@ -86,8 +84,8 @@ app.get("/logged", function(req, res) {
 
 // logout the user
 app.get("/logout", function(req, res) {
-  req.session = null  
-  console.log("user is logged out");
+  req.session = null
+  //console.log("user is logged out");
   res.redirect("/home");
 });
 
@@ -109,7 +107,7 @@ app.get("posts/:id", function(req, res) {
       res.render("posts", { posts: posts });
     })
     .catch(function(error) {
-      console.log(error);
+      //console.log(error);
     });
 });
 
@@ -134,12 +132,12 @@ app.get("/posts/all", function(req, res) {
       models.tag.findAll()
     .then(function(alltags){
       mustachevars.result2 = alltags
-      console.log(alltags)
+      //console.log(alltags)
       res.render("viewAllPosts", { posts: mustachevars.result, alltags: mustachevars.result2 });
     })
     })
     .catch(function(error) {
-      console.log(error);
+      //console.log(error);
     });
 });
 
@@ -164,12 +162,12 @@ app.get("/topics/all", function(req, res) {
       models.tag.findAll()
     .then(function(alltags){
       mustachevars.result2 = alltags
-      console.log(alltags)
+      //console.log(alltags)
       res.render("viewAllPosts", { posts: mustachevars.result, alltags: mustachevars.result2 });
     })
     })
     .catch(function(error) {
-      console.log(error);
+      //console.log(error);
     });
 });
 
@@ -210,12 +208,12 @@ app.get("/topics/:uris/", function(req, res) {
       models.tag.findAll()
     .then(function(alltags){
       mustachevars.result2 = alltags
-      console.log(alltags)
+      //console.log(alltags)
       res.render("viewAllPosts", { posts: mustachevars.result, alltags: mustachevars.result2 });
     })
     })
     .catch(function(error) {
-      console.log(error);
+      //console.log(error);
     });
 });
 
@@ -227,7 +225,6 @@ app.get("/posts/:id", function(req, res) {
       include: [
         {
           model: models.tag,
-          where: { uri: req.params.uri },
           as: "tags"
         },
         {
@@ -237,11 +234,11 @@ app.get("/posts/:id", function(req, res) {
       ]
     })
     .then(function(posts) {
-      console.log(posts);
+      //console.log(posts);
       res.render("viewSinglePost", { posts: posts });
     })
     .catch(function(error) {
-      console.log(error);
+      //console.log(error);
     });
 });
 
@@ -276,7 +273,7 @@ app.get("/deleteAccount/:id", function(req, res) {
     if (err) {
       res.negotiate(err);
     }
-    console.log("user is logged out");
+    //console.log("user is logged out");
   });
   var user = models.user
     .destroy({
@@ -310,5 +307,5 @@ app.get("/api/posts", function(req, res) {
 });
 
 app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  //console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
